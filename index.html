@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TikTok Auto Poster - Verification</title>
+    <meta name="tiktok-developers-site-verification" content="0fVoQX8KhO9O9DEkw2WjsIf8ZYsUqRVZ">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .container {
+            background: white;
+            border-radius: 20px;
+            padding: 60px 40px;
+            max-width: 600px;
+            text-align: center;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        .icon { font-size: 80px; margin-bottom: 20px; }
+        h1 { color: #333; font-size: 36px; margin-bottom: 20px; }
+        p { color: #666; font-size: 18px; line-height: 1.8; margin-bottom: 30px; }
+        .badge {
+            display: inline-block;
+            background: #10b981;
+            color: white;
+            padding: 10px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+        }
+        .footer {
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 2px solid #eee;
+            color: #999;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="icon">✅</div>
+        <h1>ยืนยันโดเมนสำเร็จ</h1>
+        <p>
+            เว็บไซต์นี้ได้รับการยืนยันกับ TikTok Developer Portal แล้ว<br>
+            คุณสามารถกด <strong>Verify</strong> ในหน้า TikTok Developer ได้เลย
+        </p>
+        <div class="badge">🎉 Domain Verified</div>
+        <div class="footer">
+            TikTok Auto Poster © 2024<br>
+            Powered by Official TikTok API
+        </div>
+    </div>
+</body>
+</html>
+```
+
+3. **กด File → Save As:**
+   - ชื่อไฟล์: `index.html`
+   - Save as type: **All Files**
+   - Encoding: **UTF-8** ⚠️ (สำคัญมาก!)
+   - บันทึกในโฟลเดอร์ `tiktok-site`
+
+4. **กด Save**
+
+---
+
+## 📂 **ตรวจสอบโฟลเดอร์ครั้งสุดท้าย**
+```
+📁 tiktok-site/
+  ├── 📄 index.html  ← รหัส 0fVoQX8KhO9O9DEkw2WjsIf8ZYsUqRVZ (บันทึกเป็น UTF-8)
+  └── 📄 tiktok-developers-site-verification.txt  ← รหัส 0fVoQX8KhO9O9DEkw2WjsIf8ZYsUqRVZ
+```
+
+---
+
+## 🚀 **ขั้นตอนต่อไป (Deploy)**
+
+### **1. Deploy ไป Netlify**
+
+1. ไปที่: https://app.netlify.com/sites/shiny-bonbon-374d1d/deploys
+2. **ลากโฟลเดอร์ `tiktok-site` ทั้งโฟลเดอร์** วางลงในหน้าเว็บ
+3. รอ Deploy เสร็จ (10-30 วินาที)
+4. เห็นข้อความ **"Published"** สีเขียว ✅
+
+---
+
+### **2. ทดสอบ 2 URLs**
+
+**เปิด Browser ใหม่ (Ctrl+Shift+N = Incognito) แล้วทดสอบ:**
+
+#### **URL ที่ 1: หน้าหลัก**
+```
+https://shiny-bonbon-374d1d.netlify.app/
+```
+**ต้องเห็น:**
+- ✅ พื้นหลังสีม่วงไล่เฉด
+- ✅ กล่องสีขาวกลางหน้าจอ
+- ✅ เครื่องหมาย ✅ สีเขียวขนาดใหญ่
+- ✅ ข้อความ **"ยืนยันโดเมนสำเร็จ"** (ภาษาไทยถูกต้อง ไม่ใช่อักขระแปลกๆ)
+- ✅ ปุ่มสีเขียว "🎉 Domain Verified"
+
+#### **URL ที่ 2: ไฟล์ยืนยัน**
+```
+https://shiny-bonbon-374d1d.netlify.app/tiktok-developers-site-verification.txt
+```
+**ต้องเห็น:**
+- ✅ หน้าจอสีขาว มีแค่รหัสเดียว: `0fVoQX8KhO9O9DEkw2WjsIf8ZYsUqRVZ`
+- ❌ ถ้าเห็น **404 Not Found** = ไฟล์ยังไม่อัปโหลด
+
+---
+
+### **3. กด Verify ใน TikTok Developer**
+
+**เมื่อทดสอบ 2 URLs ผ่านแล้ว:**
+
+1. ไปที่: https://developers.tiktok.com/apps
+2. เลือก App: **Auto Post Dearclearstock**
+3. กดปุ่ม **"URL properties"** (มุมขวาบน)
+4. กดปุ่ม **"Verify properties"**
+5. หา URL: `shiny-bonbon-374d1d.netlify.app`
+6. กดปุ่ม **"Verify"** (สีฟ้า) ข้างๆ URL
+7. **รอ 5-10 วินาที**
+
+**ผลลัพธ์ที่ควรเห็น:**
+- ✅ **"Verified"** สีเขียว
+- ✅ เครื่องหมายถูก ✓ ข้างๆ URL
+
+---
+
+## 🎯 **Checklist สุดท้าย**
+
+ก่อน Deploy ให้เช็คอีกครั้ง:
+
+- [ ] ✅ ไฟล์ `index.html` บันทึกเป็น **UTF-8** (ไม่ใช่ ANSI)
+- [ ] ✅ ภาษาไทยแสดงผลถูกต้อง (ไม่เห็นอักขระแปลกๆ)
+- [ ] ✅ รหัส meta tag: `0fVoQX8KhO9O9DEkw2WjsIf8ZYsUqRVZ`
+- [ ] ✅ ไฟล์ `.txt` มีรหัสเดียวกัน
+- [ ] ✅ มี 2 ไฟล์ในโฟลเดอร์เดียวกัน
+- [ ] ✅ ชื่อไฟล์ไม่มี `.txt` ต่อท้าย (เช่น `index.html.txt`)
+
+---
+
+## 📸 **ตัวอย่างหน้าจอที่ถูกต้อง**
+
+เมื่อเปิด `https://shiny-bonbon-374d1d.netlify.app/` ต้องเห็น:
+```
+┌─────────────────────────────────────────┐
+│         [พื้นหลังสีม่วงไล่เฉด]          │
+│                                         │
+│   ┌─────────────────────────────────┐   │
+│   │      [กล่องสีขาว กลางจอ]        │   │
+│   │                                 │   │
+│   │            ✅                   │   │
+│   │     ยืนยันโดเมนสำเร็จ          │   │
+│   │                                 │   │
+│   │  เว็บไซต์นี้ได้รับการยืนยัน...  │   │
+│   │                                 │   │
+│   │    [🎉 Domain Verified]         │   │
+│   │                                 │   │
+│   │   TikTok Auto Poster © 2024     │   │
+│   └─────────────────────────────────┘   │
+│                                         │
+└─────────────────────────────────────────┘
