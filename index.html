@@ -3,43 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nexus OS - Affiliate Automation</title>
+    <title>Nexus OS - Future of Affiliate Automation</title>
     <style>
-        body { font-family: sans-serif; text-align: center; padding: 50px; background-color: #f4f4f4; }
-        .container { background: white; max-width: 600px; margin: 0 auto; padding: 40px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
-        h1 { color: #333; }
-        .btn-tiktok { background-color: #000; color: white; padding: 15px 30px; font-size: 18px; border: none; border-radius: 5px; cursor: pointer; display: inline-flex; align-items: center; gap: 10px; }
-        .upload-area { border: 2px dashed #ccc; padding: 40px; margin-top: 30px; display: none; } /* ซ่อนไว้ก่อน */
-        .step-2 { display: none; }
+        body { margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #0a0a0a; color: #ffffff; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; overflow: hidden; }
+        .container { text-align: center; z-index: 10; padding: 20px; }
+        h1 { font-size: 4rem; margin-bottom: 10px; background: linear-gradient(90deg, #00f260, #0575e6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        p { font-size: 1.5rem; color: #888; margin-bottom: 40px; }
+        .btn { padding: 15px 40px; font-size: 1.2rem; background: linear-gradient(45deg, #00f260, #0575e6); color: white; border: none; border-radius: 50px; cursor: pointer; text-decoration: none; transition: transform 0.2s; box-shadow: 0 0 20px rgba(0, 242, 96, 0.4); }
+        .btn:hover { transform: scale(1.05); }
+        /* Background Animation */
+        .bg-glow { position: absolute; width: 600px; height: 600px; background: radial-gradient(circle, rgba(5,117,230,0.15) 0%, rgba(0,0,0,0) 70%); top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 1; }
     </style>
-    <script>
-        function showDashboard() {
-            // ฟังก์ชันหลอกๆ เพื่อเปลี่ยนหน้าจอตอนอัดคลิป
-            document.getElementById('login-section').style.display = 'none';
-            document.getElementById('dashboard-section').style.display = 'block';
-        }
-    </script>
 </head>
 <body>
+    <div class="bg-glow"></div>
     <div class="container">
-        <h1>Nexus OS</h1>
-        <p>Affiliate Automation Platform</p>
-        
-        <div id="login-section">
-            <p>Please log in to manage your campaigns.</p>
-            <button class="btn-tiktok" onclick="showDashboard()">
-                Log in with TikTok
-            </button>
-        </div>
-
-        <div id="dashboard-section" class="step-2">
-            <h2>Dashboard</h2>
-            <p>Welcome, User!</p>
-            <div class="upload-area">
-                <p>Click to post video to TikTok</p>
-                <button onclick="alert('Video Scheduled!')">Upload Content</button>
-            </div>
-        </div>
+        <h1>NEXUS OS</h1>
+        <p>Advanced Affiliate Automation Platform</p>
+        <a href="#" class="btn">Initialize System</a>
     </div>
 </body>
 </html>
